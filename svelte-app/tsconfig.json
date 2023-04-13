@@ -1,4 +1,9 @@
 {
+	/** 
+		ignore VS Code error importsNotUsedAsValues 
+		https://github.com/sveltejs/kit/issues/8650
+	**/
+
 	"extends": "@tsconfig/svelte/tsconfig.json",
 	"compilerOptions": {
 		"target": "ESNext",
