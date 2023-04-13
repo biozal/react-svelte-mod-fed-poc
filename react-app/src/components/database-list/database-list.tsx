@@ -1,7 +1,5 @@
-// src/ProjectList.tsx
-import React from "react";
 import { Table } from "antd";
-import {Database} from "../../models/database";
+import { Database } from "../../models/database";
 
 //refactor to service to emulate calling API
 
@@ -33,7 +31,9 @@ const columns = [
     }
 ]
 function DatabaseList(props: any){
+
     let databases = props.databases as Database[];
+
     if (databases && databases.length > 0) {
         return (
           <Table dataSource={databases} columns={columns} />

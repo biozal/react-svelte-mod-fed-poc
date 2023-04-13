@@ -1,6 +1,6 @@
 <script>
 	import ReactWrapper from "./ReactWrapper.svelte";
-	import { INewProject }  from "../models/new-project.ts";
+	import { INewProject }  from "../models/new-project";
 	import { onMount } from "svelte";
 	
 	let NewProject;

@@ -2,7 +2,8 @@
 <script>
     import { onMount, onDestroy } from "svelte";
     import * as React from "react";
-    import * as ReactDOM from "react-dom/client";
+    // todo: replace ReactDom.render with new 18.x API
+    // import * as ReactDOM from "react-dom/client";
     import * as ReactDom from "react-dom"
     export let component;
     export let props = {};

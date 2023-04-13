@@ -1,7 +1,7 @@
 <script>
   import ReactWrapper from "./ReactWrapper.svelte";
   import { onMount } from "svelte";
-  import { getDatabases } from "../services/database-service.ts"
+  import { getDatabases } from "../services/database-service"
 
   let DatabaseList;
   let databases;
