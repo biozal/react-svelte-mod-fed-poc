@@ -6,9 +6,9 @@ This repository is to showcase examples of how vite with Module Federation (vite
 
 1.  Clone the repository
 2.  Run `npm install` in the src/react-app directory
-3.  Run `npm build` in the src/react-app directory
+3.  Run `npm run build` in the src/react-app directory
 4.  Run `npm install` in the src/svelte-app directory
-5.  Run 'npm run dev' in the src/svelte-app directory
+5.  Run `npm run dev` in the src/svelte-app directory
 
 ## Information 
 
