@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build && rm -rf ../svelte-app/src/v3/* && cp -R dist/assets/* ../svelte-app/src/v3/",
+    "build": "tsc && vite build",
     "preview": "vite preview",
     "make-types": "node ./make-federated-types.js --outputDir ./dist/types"
   },
