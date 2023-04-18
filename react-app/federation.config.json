@@ -1,0 +1,17 @@
+{
+  "name": "sharedComponents",
+  "filename": "remoteEntry.js",
+  "exposes": {
+    "./components/database-list": "./src/components/database-list/database-list.tsx",
+    "./components/project-list": "./src/components/project-list/project-list.tsx",
+    "./components/new-project": "./src/components/new-project/new-project.tsx"
+  },
+  "shared": {
+    "react": {
+      "requiredVersion": "^18.0.2"
+    },
+    "react-dom": {
+      "requiredVersion": "^18.0.2"
+    }
+  }
+}
