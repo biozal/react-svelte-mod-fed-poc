@@ -2,6 +2,7 @@
 react-app/node_modules
 react-app/dist
 svelte-app/node_modules
+svelte-app/types/react-app.d.ts
 svelte-app/src/v3/
 *.pyc
 .grunt

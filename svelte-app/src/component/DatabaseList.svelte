@@ -1,21 +1,24 @@
-<script>
-  import ReactWrapper from "./ReactWrapper.svelte";
-  import { onMount } from "svelte";
-  import { getDatabases } from "../services/database-service"
+<script lang="ts">
+	import ReactWrapper from './ReactWrapper.svelte';
+	import { onMount } from 'svelte';
+	import { getDatabases } from '../services/database-service';
+	import type DatabaseList from 'sharedComponents/components/database-list';
 
-  let DatabaseList;
-  let databases;
+	let DatabaseListComponent: typeof import('sharedComponents/components/database-list').default;
+	let props: Parameters<typeof DatabaseList>[0] = {
+		databases: []
+	};
+	onMount(async () => {
+		props.databases = getDatabases();
+		const { default: component } = await import('sharedComponents/components/database-list');
+		DatabaseListComponent = component;
+	});
 
-  onMount(async () => {
-    databases = getDatabases();
-    const { default: component } = await import('sharedComponents/DatabaseList');
-    DatabaseList = component;
-  });
+	// strictly defined props
 </script>
 
-{#if DatabaseList && databases && databases.length > 0 }
-{ console.debug(databases.length) }
-  <ReactWrapper component={DatabaseList} props = { {databases}}  />
+{#if DatabaseListComponent && props.databases && props.databases.length > 0}
+	<ReactWrapper component={DatabaseListComponent} {props} />
 {:else}
-  <p>Loading...</p>
+	<p>Loading...</p>
 {/if}

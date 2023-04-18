@@ -1,17 +1,17 @@
 <script>
-  import ReactWrapper from "./ReactWrapper.svelte";
-  import { onMount } from "svelte";
+	import ReactWrapper from './ReactWrapper.svelte';
+	import { onMount } from 'svelte';
 
-let ProjectList;
+	let ProjectList;
 
-onMount(async () => {
-  const { default: component } = await import("sharedComponents/ProjectList");
-  ProjectList = component;
-});
+	onMount(async () => {
+		const { default: component } = await import('sharedComponents/components/project-list');
+		ProjectList = component;
+	});
 </script>
 
 {#if ProjectList}
-  <ReactWrapper component={ProjectList} />
+	<ReactWrapper component={ProjectList} />
 {:else}
-  <p>Loading...</p>
+	<p>Loading...</p>
 {/if}

@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build && rm -rf ../svelte-app/src/v3/* && cp -R dist/assets/* ../svelte-app/src/v3/",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "make-types": "node ./make-federated-types.js --outputDir ./dist/types"
   },
   "dependencies": {
     "antd": "^5.4.0",
